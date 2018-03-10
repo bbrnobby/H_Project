@@ -47,7 +47,8 @@ public class Move99 : MonoBehaviour
             {
                 //左ボタンが押されている
                 hit.transform.gameObject.transform.position = WorldPosition;
-                hit.rigidbody.velocity = Vector2.zero;
+                if(hit.rigidbody != null)
+                    hit.rigidbody.velocity = Vector2.zero;
             }
         }
     }
